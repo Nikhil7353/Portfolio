@@ -60,14 +60,38 @@ export const ContactSection: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black uppercase tracking-tight text-white leading-[0.95]">
-            HAVE A PROJECT
-            <br />
-            IN MIND?
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-200 to-purple-400">
-              LET'S BUILD
-              <br />
-              SOMETHING.
+            <span className="block overflow-hidden py-1">
+              <motion.span
+                initial={{ y: "115%" }}
+                whileInView={{ y: "0%" }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
+                className="block will-change-transform"
+              >
+                HAVE A PROJECT
+              </motion.span>
+            </span>
+            <span className="block overflow-hidden py-1">
+              <motion.span
+                initial={{ y: "115%" }}
+                whileInView={{ y: "0%" }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.85, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+                className="block will-change-transform"
+              >
+                IN MIND?
+              </motion.span>
+            </span>
+            <span className="block overflow-hidden py-1">
+              <motion.span
+                initial={{ y: "115%" }}
+                whileInView={{ y: "0%" }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.85, delay: 0.24, ease: [0.16, 1, 0.3, 1] }}
+                className="block will-change-transform text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-200 to-purple-400"
+              >
+                LET'S BUILD SOMETHING.
+              </motion.span>
             </span>
           </h2>
 

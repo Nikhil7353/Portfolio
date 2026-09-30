@@ -137,19 +137,29 @@ export const Hero: React.FC = () => {
           <span className="tracking-wider uppercase">NIKHIL CHAVHAN</span>
         </motion.div>
 
-        {/* Oversized Headline */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-black uppercase tracking-tight text-white leading-[0.95]"
-        >
-          <span>SOFTWARE</span>
-          <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-500">
-            DEVELOPER
+        {/* Oversized Headline with Clip-Path Unmasking */}
+        <h1 className="text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-black uppercase tracking-tight text-white leading-[0.95]">
+          <span className="block overflow-hidden py-1">
+            <motion.span
+              initial={{ y: "115%" }}
+              animate={{ y: "0%" }}
+              transition={{ duration: 0.95, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              className="block will-change-transform"
+            >
+              SOFTWARE
+            </motion.span>
           </span>
-        </motion.h1>
+          <span className="block overflow-hidden py-1">
+            <motion.span
+              initial={{ y: "115%" }}
+              animate={{ y: "0%" }}
+              transition={{ duration: 0.95, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
+              className="block will-change-transform text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-500"
+            >
+              DEVELOPER
+            </motion.span>
+          </span>
+        </h1>
 
         {/* Supporting Text */}
         <motion.p

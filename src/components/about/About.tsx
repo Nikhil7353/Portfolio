@@ -34,19 +34,31 @@ export const About: React.FC = () => {
           <span className="tracking-widest uppercase">01 / ABOUT NIKHIL</span>
         </div>
 
-        {/* Large Statement */}
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-[1.1] max-w-5xl"
-        >
-          I BUILD DIGITAL PRODUCTS{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-300 to-purple-400">
-            FROM IDEA TO PRODUCTION.
+        {/* Large Statement with Unmasking */}
+        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-[1.1] max-w-5xl">
+          <span className="block overflow-hidden py-1">
+            <motion.span
+              initial={{ y: "115%" }}
+              whileInView={{ y: "0%" }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
+              className="block will-change-transform"
+            >
+              I BUILD DIGITAL PRODUCTS
+            </motion.span>
           </span>
-        </motion.h2>
+          <span className="block overflow-hidden py-1">
+            <motion.span
+              initial={{ y: "115%" }}
+              whileInView={{ y: "0%" }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.85, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              className="block will-change-transform text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-300 to-purple-400"
+            >
+              FROM IDEA TO PRODUCTION.
+            </motion.span>
+          </span>
+        </h2>
 
         {/* Supporting Copy */}
         <motion.p
